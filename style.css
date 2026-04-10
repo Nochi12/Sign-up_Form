@@ -93,7 +93,7 @@ body{
   font-family: var(--h_font);
   font-size: 80px;
   justify-content: center;
-  margin-top: 200px;
+  margin-top: 150px;
   background-color: rgb(0 0 0 / 40%);
   background-size:  100%;
   width:  630px;
@@ -129,7 +129,7 @@ a:hover{
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-top: 180px;
+  margin-top: 120px;
 }
 
 .right-side-up{
@@ -148,6 +148,7 @@ a:hover{
   width: 1289px;
   margin-left: -45px;
   padding-left: 45px;
+  box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.72);
 }
 .right-side-middle > h1{
   font-size: var(--h2_font_size);
@@ -185,4 +186,27 @@ a:hover{
 .form-item input[type="password"]:focus{
    outline: 1px solid  blue;
    box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.72);
+}
+
+.form-item input[type="password"]{
+  margin-bottom: 45px;
+}
+
+input + span {
+  position: relative;
+}
+.form-item input[type="password"]:user-invalid,
+.form-item input[type="email"]:user-invalid{
+    outline: 1px solid  red;
+}
+.form-item input[type="password"]:user-invalid + span::after{
+  font-size: var(--font_size);
+  position: absolute;
+  content: "PLEASE ENTER PASSWORD BETWEEN 8 - 16";
+  color: var(--white_color);
+  background-color: black;
+  padding: 5px 10px;
+  top: -35px;
+  left: 15px;
+  border-radius: 3px;
 }
