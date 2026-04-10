@@ -42,10 +42,16 @@ h1, h2, h3, h4, h5, h6 {
   --text_font: "arimo", "Times New Roman" , "Lucida Console",Arial , sans-serif ;
   
   --font_size: 14px;
+  --input_font_size: 17px;
   --h2_font_size: 26px;
+  --bg_color:#EAEDF0;
+  --form_bg_color:#F6F7F8;
+  --padding:30px;
+  --form_padding:90px;
 }
 body{
   font-family:var(--text_font);
+  background-color: var(--bg_color);
 }
 @font-face {
     font-family: "norse";
@@ -129,10 +135,47 @@ a:hover{
 .right-side-up{
   display: flex;
   flex-direction: column;
-  
+  margin-bottom: var(--padding);
 }
 
 .right-side-up  > h1 {
     font-size: var(--h2_font_size);
     width: 885px;
+}
+
+.right-side-middle{
+  background-color: var(--form_bg_color);
+  width: 1289px;
+  margin-left: -45px;
+  padding-left: 45px;
+}
+.right-side-middle > h1{
+  font-size: var(--h2_font_size);
+  margin-bottom: 20px;
+  margin-top: 15px;
+}
+
+.form-row{
+  display: flex;
+  gap: var( --form_padding);
+}
+
+.form-item{
+  font-size: var(--font_size);
+  display: flex;
+  flex-direction: column;
+ 
+}
+
+.form-item input[type="text"]{
+  width: 350px;
+  padding: 3px;
+   border: 1px solid #E5E7EB;
+   font-size: var(--input_font_size);
+  border-radius: 3px;
+}
+
+.form-item input[type="text"]:focus{
+   outline: 1px solid  blue;
+   box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.72);
 }
