@@ -167,15 +167,22 @@ a:hover{
  
 }
 
-.form-item input[type="text"]{
+.form-item input[type="text"],
+.form-item input[type="email"],
+.form-item input[type="number"],
+.form-item input[type="password"]{
   width: 350px;
   padding: 3px;
    border: 1px solid #E5E7EB;
    font-size: var(--input_font_size);
   border-radius: 3px;
+  margin-bottom: var(--padding);
 }
 
-.form-item input[type="text"]:focus{
+.form-item input[type="text"]:focus,
+.form-item input[type="email"]:focus,
+.form-item input[type="number"]:focus,
+.form-item input[type="password"]:focus{
    outline: 1px solid  blue;
    box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.72);
 }
